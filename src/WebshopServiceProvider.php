@@ -24,7 +24,8 @@ class PermissionsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        //require the webshop routes
+        require __dir__ . "/routes/routes.php";
     }
 
 }
