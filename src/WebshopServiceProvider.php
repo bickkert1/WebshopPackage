@@ -5,7 +5,7 @@ namespace Schoutentech\webshop;
 use Illuminate\Support\ServiceProvider;
 
 
-class PermissionsServiceProvider extends ServiceProvider
+class WebshopServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
