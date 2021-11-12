@@ -3,6 +3,7 @@
 namespace Schoutentech\webshop;
 
 use Illuminate\Support\ServiceProvider;
+use Schoutentech\Webshop\Console\AddBrand;
 
 
 class WebshopServiceProvider extends ServiceProvider
@@ -24,6 +25,10 @@ class WebshopServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // adding artisan commands:
+        $this->commands([
+           AddBrand::class,
+        ]);
         // adding blade directives:
         Blade::directive('datetime', function ($expression) {
             $contents = File::get(__DIR__ . '\directives\loadproducts.php');    $replaced = str_replace('$expression', $expression, $contents);    return Str::finish($replaced, '?>');
