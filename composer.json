@@ -1,0 +1,29 @@
+{
+    "name": "schoutentech/webshop",
+    "authors": [
+        {
+            "name": "Bickkert1",
+            "email": "biko@famschouten.com"
+        }
+    ],
+    "description": "this is a test",
+    "require": {
+        "laravel/breeze" : "*"
+    },
+    "type": "library",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Schoutentech\\Webshop\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Schoutentech\\Webshop\\WebshopServiceProvider"
+            ],
+               "aliases": {
+            }
+        }
+    }
+}
