@@ -24,6 +24,10 @@ class WebshopServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // adding blade directives:
+        Blade::directive('datetime', function ($expression) {
+            $contents = File::get(__DIR__ . '\directives\loadproducts.php');    $replaced = str_replace('$expression', $expression, $contents);    return Str::finish($replaced, '?>');
+        });
         //require the webshop routes
         require __dir__ . "/routes/routes.php";
     }

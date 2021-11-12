@@ -1,3 +1,5 @@
 <?php
 
-Route::get("");
+Route::get("/login", function(){
+  return view("login");
+});
